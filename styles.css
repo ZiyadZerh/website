@@ -1,24 +1,60 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family:monospace;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .top-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally if needed */
     background-color: darkblue;
-    font-size: 400%; /* Large font size */
-    color: bisque;
-    width: 100%; /* Full width */
-    height: 100px; /* Fixed height */
-    padding: 25px 0; /* Vertical padding */
+    width: 100%;
+    padding: 0px 0; /* Vertical padding */
+    padding-top: 0px;
     text-align: center;
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    overflow: hidden; /* Hide overflow if content exceeds */
-    letter-spacing: 0px;
+    padding-bottom: 0; /* Remove extra padding */
+    height: 20%; /* Change from min-content to auto */
 }
 
+.top-div .title {
+    font-size: 380%; /* Large font size */
+    color: rgb(231, 236, 244);
+    letter-spacing: 0px;
+    margin: 0; /* Remove default margin */
+}
+
+.top-div .under-title {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the <p> elements */
+    width: 100%;
+    margin-top: 0px; /* Add a small margin to create space between title and p's */
+    font-size: 125%;
+    transform: translateY(-45px);
+
+}
+
+
+.top-div .under-title p.nav-link {
+    color: rgb(231, 236, 244);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    flex-grow: 1; /* Allow the paragraphs to grow and distribute space */
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+
+
+.top-div .under-title p.nav-link:hover {
+    color:green;
+}
 
 .middle-div {
     background-color: aliceblue;
@@ -26,28 +62,32 @@ html, body {
     padding-top: 1%;
     display: flex;
     justify-content: center;
+    height: 100%;
+    flex-grow: 1;
 }
 
 .middle-div .search-div {
+    height: 50px;
+    width: 360px;
     display: flex;
 }
 
 .middle-div .search-div .search-bar {
     width: 300px;
-    padding: 10px;                   /* Add padding inside the input */
-    border: 2px solid #ccc;          /* Add border if needed */
-    border-radius: 25px;             /* Rounded corners */
-    font-size: 16px;                 /* Font size for input text */
-    outline: none;                   /* Remove default focus outline */
-    transition: border-color 0.3s;   /* Smooth transition for border color */
+    padding: 10px; /* Add padding inside the input */
+    border: 2px solid #ccc; /* Add border if needed */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Font size for input text */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
 .middle-div .search-div .search-bar:focus {
-    border-color: #007BFF;           /* Change border color on focus */
+    border-color: #007BFF; /* Change border color on focus */
 }
 
 .middle-div .search-div .search-bar::placeholder {
-    color: #888;                     /* Style placeholder text */
+    color: #888; /* Style placeholder text */
 }
 
 .middle-div .search-div .search-button {
@@ -60,7 +100,7 @@ html, body {
     align-items: center;
     background-color: #fff; /* Optional: Add background color */
     cursor: pointer; /* Optional: Add cursor pointer */
-    margin-left: 1%;
+    margin-left: 5px;
     overflow: hidden;
 }
 
@@ -69,15 +109,15 @@ html, body {
     height: auto;
 }
 
-
 .lower-div {
-    background-color:rgb(0, 0, 75);
+    background-color: rgb(0, 0, 75);
     color: white;
     padding-left: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    height: 180px;
 }
 
 .footer {
@@ -88,11 +128,11 @@ html, body {
     margin-left: 3px;
     margin-right: 3px;
     border-radius: 25px;
-    padding-top: 0px;    
-    
+    padding-top: 0px;
+    height: 180px;
 }
 
 .footer p {
-    font-style:oblique;
-    font-size: 120%
+    font-style: oblique;
+    font-size: 120%;
 }
