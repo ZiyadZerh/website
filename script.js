@@ -1,4 +1,4 @@
-function e() {
+function calculateDistance_() {
 
 document.addEventListener("DOMContentLoaded", () => {
     function calculateDistance(element1, element2) {
@@ -31,3 +31,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
 });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".search-button");
+    const input = document.querySelector(".search-bar");
+
+    console.log('Adding event listener to button'); // Debugging line
+    
+    button.addEventListener("click", () => {
+        const query = input.value.trim(); // Get and trim input value
+        console.log(`Search query: ${query}`);
+
+        if (query) { // Check if the input is not empty
+            searchDuckDuckGo(query); // Call the search function
+        } else {
+            alert("Please enter a search term."); // Alert if empty
+        }
+    });
+});
+
+function searchDuckDuckGo(query) {
+    // Encode the query to make it URL safe
+    const encodedQuery = encodeURIComponent(query);
+    // Construct the DuckDuckGo search URL
+    const searchURL = `https://duckduckgo.com/?q=${encodedQuery}`;
+    
+    // Open the search URL in a new tab
+    window.open(searchURL, '_blank');
+}
+
