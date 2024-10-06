@@ -9,7 +9,8 @@ html, body {
     font-family: monospace;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vb;
+    
 }
 
 .top-div {
@@ -20,6 +21,20 @@ html, body {
     background-color: darkblue;
     width: 100%;
     height: 180px;
+}
+
+.toggle-mode {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+}
+
+.toggle-mode button {
+    font-family:monospace;
+    border-radius: 25px;
+    border-width: 0;
+    background-color:aquamarine
 }
 
 .title-div {
@@ -92,12 +107,13 @@ html, body {
     padding-bottom: 25%;
     padding-top: 1%;
     display: flex;
-    height: 100%;
+
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 0;
+    gap: 10px;
 }
 .middle-div .search-div {
     height: 50px;
@@ -136,12 +152,11 @@ html, body {
     width: 70%;
     height: auto;
 }
-.lol {
-    position: absolute;
-    top: 50px;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.rotate-divs-container {
+    position: relative;
+    top: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
     width: 220px;
     height: 220px;
 }
@@ -161,8 +176,10 @@ html, body {
     0% {
         left: 0px;
    }
+
     100% {
         left: calc(100px + 110px);
+
    }
 }
 .div-2 {
@@ -213,16 +230,43 @@ html, body {
         top: calc(14.64% + 71.72%);
    }
 }
+
+.middle-div .learning {
+    width: 300px;
+    
+
+
+
+    background-color:rgb(207, 229, 255);
+}
+
+.middle-div .learning h2 {
+    text-align: center;
+}
+
+.middle-div .learning .main p {
+    margin-left: 5px;
+    font-size: large;
+}
+
+
 .lower-div {
     background-color: rgb(0, 0, 75);
     color: white;
-    padding-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
     z-index: 1;
 }
+
+/*
 .footer {
     background-color: #007BFF;
     padding: 5px;
@@ -237,4 +281,15 @@ html, body {
 .footer p {
     font-style: oblique;
     font-size: 120%;
+}
+*/
+
+.lower-div .photo a img {
+    width: 20px;
+    height: auto;
+
+}
+
+.lower-div .X a {
+    margin-left: 20px;
 }
