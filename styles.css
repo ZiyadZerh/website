@@ -9,7 +9,7 @@ html, body {
     font-family: monospace;
     display: flex;
     flex-direction: column;
-    min-height: 100vb;
+    min-height: 100vh;
     
 }
 
@@ -40,7 +40,7 @@ html, body {
 .title-div {
     display: flex;
     flex-direction: row;
-    position: relative; /* This is the container */
+    position: relative;
 }
 
 .top-div .title-container .title-div {
@@ -56,13 +56,13 @@ html, body {
 
 .title-div .fun {
     display: flex;
-    position: absolute; /* Changed to absolute */
+    position: absolute;
     font-family: 'MinecraftFont';
     font-size: 100%;
     height: 30px;
-    top: 75px; /* Position from the top of the title-div */
-    left:80px /* Position from the right */;
-    transform: rotate(-25deg);
+    top: 75px;
+    left:80px;
+    transform: rotate(-15deg);
     letter-spacing: 4px;
     animation: move-letters 0.5s infinite alternate ease-in-out;
 }
@@ -113,9 +113,10 @@ html, body {
     align-items: center;
     position: relative;
     z-index: 0;
-    gap: 10px;
 }
 .middle-div .search-div {
+    margin-top: 5px;
+    margin-bottom: 30px;
     height: 50px;
     width: 360px;
     display: flex;
@@ -152,6 +153,28 @@ html, body {
     width: 70%;
     height: auto;
 }
+
+
+
+
+.middle-div .learning {
+    width: 300px;
+    margin-bottom: 30px;
+
+
+    background-color:rgb(207, 229, 255);
+}
+
+.middle-div .learning h2 {
+    text-align: center;
+}
+
+.middle-div .learning .main p {
+    margin-left: 5px;
+    font-size: large;
+}
+
+
 .rotate-divs-container {
     position: relative;
     top: 0px;
@@ -231,23 +254,6 @@ html, body {
    }
 }
 
-.middle-div .learning {
-    width: 300px;
-    
-
-
-
-    background-color:rgb(207, 229, 255);
-}
-
-.middle-div .learning h2 {
-    text-align: center;
-}
-
-.middle-div .learning .main p {
-    margin-left: 5px;
-    font-size: large;
-}
 
 
 .lower-div {

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".search-button");
     const input = document.querySelector(".search-bar");
 
-    console.log('Adding event listener to button'); // Debugging line
+    console.log('Adding event listener to button');
 
     function performSearch() {
         const query = input.value.trim();
@@ -11,16 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (query) {
             searchDuckDuckGo(query);
         } else {
-            searchDuckDuckGo(input.id);  // Search placeholder if input is empty
+            searchDuckDuckGo(input.id);
         }
     }
 
-    // Event listener for the button click
     button.addEventListener("click", performSearch);
 
-    // Event listener for the Enter key press
     input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {  // Checking if Enter is pressed
+        if (event.key === "Enter") {
             performSearch();
         }
     });
@@ -139,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Wait a few seconds before deleting
                 setTimeout(() => {
                     animateDeletion(randomElement);
-                }, 2000); // 2 seconds delay before deletion
+                }, 2000); // milliseconds delay before deletion
             }
         }, 30); // Adjust speed of showing characters
     }
@@ -152,22 +150,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 j--;
             } else {
                 clearInterval(deleteInterval);
-                // Call the function to update placeholder again
                 updatePlaceholder();
             }
         }, 30); // Adjust speed of deletion
     }
 
-    // Start the placeholder update on load
     updatePlaceholder();
 });
 
 function searchDuckDuckGo(query) {
-    // Encode the query to make it URL safe
     const encodedQuery = encodeURIComponent(query);
-    // Construct the DuckDuckGo search URL
     const searchURL = `https://duckduckgo.com/?q=${encodedQuery}`;
-    
-    // Open the search URL in a new tab
     window.open(searchURL, '_blank');
 }
