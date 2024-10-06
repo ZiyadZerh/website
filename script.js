@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".search-button");
     const input = document.querySelector(".search-bar");
 
-    console.log('Adding event listener to button');
-
     function performSearch() {
         const query = input.value.trim();
         console.log(`Search query: ${query}`);
