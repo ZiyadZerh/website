@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Skibidi meaning",
         "cleverbot dot com",
         "How do LLMs work?",
-        "Biochemisty course",
+        "Biochemistry course",
         "Benefits of getting married early",
         "Benefits of not getting married early",
         "Will the sun explode?",
